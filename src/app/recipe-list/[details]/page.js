@@ -18,15 +18,15 @@ export default async function RecipeDetails({params}){
                 {/* <img className="h-[80%] w-[80%] object-cover rounded-md" src={getRecipeDetails.image} alt={getRecipeDetails.name} /> */}
                 <Card data={getRecipeDetails}/>
             </div>
-            <div className="w-[30%] h-[75%] border-[1px] border-zinc-700 bg-zinc-800 py-4 px-2">
+            <div className="w-[30%] h-[75%] border-[1px] border-zinc-700 bg-zinc-800 py-4 px-2 overflow-auto">
                 <h1 className="text-center font-bold text-2xl tracking-wide text-yellow-300">{getRecipeDetails.name}</h1>
-                <h4 className="font-semibold opacity-70">Ingredients</h4>
+                <h4 className="font-semibold opacity-70 mt-4">Ingredients</h4>
                 <ul className="list-disc list-inside border-b-[1px] pb-4">
                     {
                         getRecipeDetails?.ingredients.map(item=> <li>{item}</li>)
                     }
                 </ul>
-                <h4 className="font-semibold opacity-70">Instructions</h4>
+                <h4 className="font-semibold opacity-70 mt-4">Instructions</h4>
                 <ol className="list-decimal list-inside">
                     {
                         getRecipeDetails?.instructions.map(item=><li>{item}</li>)

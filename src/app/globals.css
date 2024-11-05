@@ -19,3 +19,8 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+:root {
+  --primary: #f1f1f1;
+  --secondary: yellow;
+  --tertiary: rgba(31, 209, 253, 0.6);
+}
