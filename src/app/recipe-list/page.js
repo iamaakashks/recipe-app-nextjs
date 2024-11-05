@@ -1,6 +1,6 @@
 
 import RecipeeList from "../../components/RecipeeList";
-
+import Head from 'next/head';
 const fetchListOfRecipe = async ()=>{
     try{
         const apiResponse = await fetch(`https://dummyjson.com/recipes`).then(res=>res.json());
@@ -13,8 +13,13 @@ const fetchListOfRecipe = async ()=>{
 export default async function RecipeList(){
     const getRecipes = await fetchListOfRecipe();
     return (
-        <div>
-            <RecipeeList recipeList={getRecipes}/>
-        </div>
+        <>
+            <Head>
+                <title>Recipe List</title>
+            </Head>
+            <div>
+                <RecipeeList recipeList={getRecipes}/>
+            </div>
+        </>
     )
 }
